@@ -22,7 +22,7 @@ RUN systemctl enable xrdp
 
 RUN echo "root:toor" | chpasswd
 ```
-This file sets up a Kali Linux container using the ARM64 image (matching my VPS's architecture). It installs the  `kali-linux-large` pen testing suite (this is a large package it may take a while, feel free to install whatever fits you're needs from [Kali's Metapackages](https://www.kali.org/docs/general-use/metapackages/) ), the XFCE desktop, and `xrdp` for remote access.
+This file sets up a Kali Linux container using the ARM64 image (matching my VPS's architecture). It installs the  `kali-linux-large` pen testing suite (this is a large package it may take a while, feel free to install whatever fits you're needs from [Kali's Metapackages](https://www.kali.org/docs/general-use/metapackages/) ), the XFCE desktop, and `xrdp` for remote access. Change the password after login.
 
 **docker compose file:**
 ```
