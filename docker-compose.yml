@@ -1,0 +1,23 @@
+services:
+  kali:
+    build: .
+    container_name: kali
+    user: root
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    ports:
+      - "127.0.0.1:3389:3389"
+    volumes:
+      - kali_home:/root
+    command: >
+      /bin/bash -c "
+      service xrdp start &&
+      startxfce4
+      "
+volumes:
+	kali_home:
