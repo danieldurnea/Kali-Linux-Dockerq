@@ -1,4 +1,4 @@
-FROM kalilinux/kali-rolling:arm64
+FROM kalilinux/kali-rolling
 
 ENV DEBIAN_FRONTEND noninteractive
 
